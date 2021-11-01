@@ -6,9 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import android.content.Context;
 
-import androidx.test.filters.SmallTest;
 import androidx.test.platform.app.InstrumentationRegistry;
-import androidx.test.runner.AndroidJUnit4;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -39,5 +37,13 @@ public class CustomListTest {
         assertFalse(list.hasCity(city));
         list.addCity(city);
         assertTrue(list.hasCity(city));
+    }
+
+    @Test
+    public void deleteCityTest() {
+        City city = new City("Toronto", "Ontario");
+        list.addCity(city);
+        list.deleteCity(city);
+        assertFalse(list.hasCity(city));
     }
 }
