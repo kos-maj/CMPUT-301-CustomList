@@ -30,4 +30,5 @@ public class CustomListTest {
         list.addCity(new City("Edmonton", "Alberta"));
         assertEquals(size+1, list.getCount());
     }
+
 }
