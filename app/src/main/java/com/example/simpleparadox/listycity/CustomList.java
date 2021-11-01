@@ -20,7 +20,7 @@ public class CustomList extends ArrayAdapter<City> {
     private Context context;
 
     public CustomList(Context context, ArrayList<City> cities){
-        super(context,0, cities);
+        super(context, 0, cities);
         this.cities = cities;
         this.context = context;
     }
